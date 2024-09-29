@@ -13,6 +13,7 @@
   font-size:100%;
   font-weight: bolder;
   font-stretch: semi-condensed;
+  -webkit-text-stroke: 1.5px black;
 
 }
 
@@ -24,15 +25,28 @@
 
 .container3 {
   position: relative;
-  text-align: justify;
+  text-align: left;
   color: rgb(0, 0, 0);
   font-size:100%;
-  font-weight: bolder;
+  font-weight: bold;
   font-stretch:normal;
-  margin-right:45px;
-  margin-left: 45px;
+  margin-right:100px;
+  margin-left: 100px;
   
 }
+
+.container4 {
+  position: relative;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-size:100%;
+  font-weight: normal;
+  font-stretch:normal;
+  margin-right:100px;
+  margin-left: 100px;
+  
+}
+
 
 .profilepic {
   position: relative;
@@ -42,9 +56,48 @@
   border-style: solid;
   border-color: rgb(35, 194, 156);
   border-radius: 50px;
-  border-width:20px;
-  
+  border-width:15px;
 }
+
+/* The border-width is reduced to 8px, when the viewport is 800px or smaller */
+  @media screen and (max-width: 800px) {
+  .profilepic {
+    border-width: 8px; 
+  }
+  }
+
+  /* text stroke is reduced when viewport is 800px or smaller */
+  @media screen and (max-width:800px) {
+    .container {
+      -webkit-text-stroke: .6px black;
+  
+    }
+    
+  }
+
+   /* margins are reduced when viewport is 800px or smaller */
+   @media screen and (max-width:800px) {
+    .container4 {
+      margin-right:20px;
+      margin-left:20px;
+  
+    }
+    
+  }
+
+  @media screen and (max-width:800px) {
+    .container3 {
+      margin-right:20px;
+      margin-left:20px;
+  
+    }
+    
+  }
+
+.textoutline {
+  -webkit-text-stroke: 16px black;
+}
+
 .centered {
   position: absolute;
   top: 0%;
@@ -54,21 +107,20 @@
 
 .top-left {
   position: absolute;
-  top: 0px;
-  left: 40px;
+  top: -10px;
+  left: 45px;
 }
 
 img{
   opacity:0.85
 }
-h1 {
-  font-size: 5vw;
-}
-
 
 h1 {
   font-size: 5vw;
+  
+ 
 }
+
 
 </style>
 </head>
@@ -78,24 +130,27 @@ h1 {
 <div class="container">
   <img src="img/BW-landingpage-2mb-2.jpg" alt="A drawing by Peter" style="width:100%;opacity:.85">
 
-  <div class="top-left"><h1>pdbreathwork</h1></div>
+  <div class="top-left">
+    
+      <h1>pdbreathwork</h1></div>
  
 </div>
+
 <br>
 <br>
  
  <div class="container2">  
          
-      <img src="img/Peter-2.jpg" alt="photo of a smiling Peter Dueck" class= profilepic>
+      <img src="img/Peter-2.jpg" alt="photo of a smiling Peter Dueck" class= profilepic style="opacity:1">
   </div>
 </div>
   <br>
   <div class="container3">
-    <P>My name is Peter and I'm a Level One Apprentice halfway through a 2 year 1000 hour breathwork program with an 
+    <p>My name is Peter and I'm a Level One Apprentice working towards completing a 2 year 1000 hour breathwork program with an 
       organization called <a href="https://www.breathworkforrecovery.com/">Breathwork for Recovery</a>. I'm a person in recovery
       from substance use, live with Multiple Sclerosis, love making art, and seek to be of service for the liberation 
       of all beings. Some of the ways I am pursuing this is through the study of systems of oppression such as white 
-      supremacy and patriarchal conditioning and well as through curiosity and playfulness. I believe in prison abolition 
+      supremacy and patriarchal conditioning as well as through curiosity and playfulness. I believe in prison abolition 
       and that trans rights are human rights.
       <br><br>I am a settler living on stolen land in Treaty 1 Territory the ancestral lands of the Anishinaabeg, Anishininewuk, 
       Dakota Oyate, Denesuline and Nehethowuk Nations and the homeland of the Red River Métis also know as Winnipeg Manitoba
@@ -106,7 +161,10 @@ h1 {
 </div>
 
 <br><br>
-<script src="https://www.cognitoforms.com/f/seamless.js" data-key="7fIPCvDKmE-tcMjXur2QcA" data-form="6"></script>
+<div class="container4">
+  <script src="https://www.cognitoforms.com/f/seamless.js" data-key="7fIPCvDKmE-tcMjXur2QcA" data-form="6"></script>
+</div>
+
 
 </body>
 </html> 
